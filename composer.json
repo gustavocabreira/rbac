@@ -1,0 +1,33 @@
+{
+  "name": "gustavocabreira/rbac",
+  "description": "Resource-scoped RBAC for any PHP system (PDO/MySQL, framework-agnostic).",
+  "type": "library",
+  "require": {
+    "php": ">=8.0",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*"
+  },
+  "require-dev": {
+    "pestphp/pest": "^1.21",
+    "mockery/mockery": "^1.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "GustavoCabreira\\Rbac\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GustavoCabreira\\Rbac\\Tests\\": "tests/"
+    },
+    "classmap": [
+      "database/migrations-local/"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "stable"
+}
